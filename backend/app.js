@@ -15,6 +15,9 @@ const DATABASE_URL = process.env.MONGODB_URL;
 
 app.use("/contact", contactRouter);
 
+app.use("/",(req,res)=>{
+    res.send("all working");
+})
 
 app.listen(PORT,() => {
     connectDB(DATABASE_URL);
